@@ -43,4 +43,9 @@ public class EmployeeController {
         );
     }
 
+    @DeleteMapping("/{id}")
+    public Mono<Void> delete(@PathVariable Integer id){
+        return employeeRepo.deleteById(id);
+    }
+
 }
