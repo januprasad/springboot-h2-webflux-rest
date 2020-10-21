@@ -33,4 +33,10 @@ public class Employee {
     public String getName() {
         return name;
     }
+
+    public Employee rebuild(Employee employee){
+        setName(employee.getName());
+        setCode(employee.getCode());
+        return this;
+    }
 }
